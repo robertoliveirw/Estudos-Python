@@ -8,3 +8,5 @@ ultimonome = listanome[-1]
 
 print(f"Primeiro nome: {primeironome}")
 print(f"Último nome: {ultimonome}")
+
+# Finalizado
