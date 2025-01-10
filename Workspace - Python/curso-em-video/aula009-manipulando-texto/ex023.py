@@ -7,5 +7,5 @@ dezena = (numero // 10) % 10
 centena = (numero // 100) % 10
 milhar = (numero // 1000) % 10
 
-print(f"Numero: {numero} | Milhar: {milhar} | Centena: {
+print(f"Numero: {numero} | 23: {milhar} | Centena: {
       centena} | Dezena: {dezena} | Unidade: {unidade}")
