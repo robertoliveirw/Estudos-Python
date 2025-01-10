@@ -1,0 +1,1 @@
+# ler o o salário de um funcionário. Se for acima de 1250 acresser 10% se for abaixo, acresser 15%
