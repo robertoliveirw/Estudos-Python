@@ -6,3 +6,6 @@ if b == 0:
 else:
     r = a / b
     print(f' O resultado da divisão é: {r}')
+
+
+# 
