@@ -1,4 +1,10 @@
 # se apresentar
 
-nome = input('Digite o seu nome: ')
-print(f'Prazer em te conhecer, {nome}!')
+nome = 'Roberto'
+idade = 21
+cidade = 'São Luís'
+
+apresentacao = f'Olá, meu nome é {nome}! Eu tenho {
+    idade} anos e moro em {cidade}'
+
+print(apresentacao)
