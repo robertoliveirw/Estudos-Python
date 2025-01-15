@@ -1,5 +1,3 @@
-# Operações métodos da classe set:
-
 # Operações com conjuntos em Python
 
 # 1. .add()
