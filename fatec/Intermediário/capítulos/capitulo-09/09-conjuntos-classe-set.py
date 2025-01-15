@@ -12,3 +12,7 @@ C4 = {} # Isso não é um conjunto, é um dicionário;
 nome = 'Roberto Eugenio Lopes Prazeres de Oliveira'
 C5 = set(nome)
 print(C5)
+
+lista = [1,2,3,4,5,6,2,5,6]
+C6 =  set(lista)
+print (C6)
