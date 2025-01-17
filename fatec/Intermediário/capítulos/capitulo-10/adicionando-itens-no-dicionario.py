@@ -39,10 +39,4 @@ UF['PR'] = 'Paraná'
 UF['RS'] = 'Rio Grande do Sul'
 UF['SC'] = 'Santa Catarina'
 
-
-
-
-
-
-
 print(UF)
