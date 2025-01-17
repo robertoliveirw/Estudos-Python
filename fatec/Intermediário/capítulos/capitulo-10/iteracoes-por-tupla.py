@@ -1,4 +1,4 @@
-# Iteção - Falar os itens do dicionário e a sua palavra-chave
+# Iteção - Falar os itens do dicionário atraves de uma tupla 
 
 UF = {
     'AC': 'Acre',
@@ -33,8 +33,8 @@ UF = {
 print('Início do Programa \n O dicionário é esse:')
 contador = 1
 
-for X in UF:
-    print(f'{contador} -- {X} - {UF[X]}')
+for SIGLA, ESTADO in UF.items():
+    print(f'{contador} -- {SIGLA} - {ESTADO}')
     contador += 1
 
 print('\n Fim do programa')
