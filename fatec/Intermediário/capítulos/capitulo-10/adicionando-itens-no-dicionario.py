@@ -39,4 +39,9 @@ UF['PR'] = 'Paraná'
 UF['RS'] = 'Rio Grande do Sul'
 UF['SC'] = 'Santa Catarina'
 
+#Add número
+UF['QTDE'] = '27'
+
 print(UF)
+print(f'\n{UF['MA']}')
+print(f'\n{UF['QTDE']}')
