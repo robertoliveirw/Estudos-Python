@@ -10,5 +10,3 @@ lita_produtos = [
     {'nome': 'ipad', 'preco':9000, 'estoque':50},
     {'nome': 'airpod', 'preco':2000, 'estoque':60}
 ]
-
-print(lita_produtos)
