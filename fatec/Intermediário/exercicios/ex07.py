@@ -6,8 +6,8 @@ N = int(input('Digite um número: \n'))
 arq = open('ex_07_ex_resolvido_11.1.txt', 'w')
 
 while N != 0:
-    arq.write(f'{arq} \n')
-    N = int(input('Digite um número: \n'))
+    arq.write(f'{N} \n')
+    N = int(input('Digite um número: '))
 
 arq.close()
 print('\n Fim do programa')
