@@ -2,6 +2,7 @@
 Escreva um programa que leia dois números reais e calcule as 4 operações aritméticas entre eles usando uma função. Exiba o resultado com duas casas decimais. '''
 
 def operacoes(a,b):
+    '''Esta função realiza as 4 operações aritiméticas e retorna o valor na tela'''
     adicao = a + b
     print(f'O resultado da soma é: {adicao}')
     subtracao = a - b
