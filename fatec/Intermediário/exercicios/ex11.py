@@ -1,0 +1,2 @@
+'''Exercício resolvido número 11 referente ao exercício: Resolvido 12.1
+Escreva um programa que leia dois números reais e calcule as 4 operações aritméticas entre eles usando uma função. Exiba o resultado com duas casas decimais. '''
