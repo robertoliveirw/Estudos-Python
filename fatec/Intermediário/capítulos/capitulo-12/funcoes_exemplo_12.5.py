@@ -1,4 +1,4 @@
-# Exemplo 12.4
+# Exemplo 12.5
 from random import randint
 
 # Função Criada
