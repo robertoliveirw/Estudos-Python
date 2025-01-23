@@ -3,6 +3,7 @@
 
 # Função Criada
 def MontaSaida (*dados, sep=', '):
+    '''Esta função se utiliza do médoto .join() para unir as strings'''
     saida = sep.join(dados)
     return saida
 
