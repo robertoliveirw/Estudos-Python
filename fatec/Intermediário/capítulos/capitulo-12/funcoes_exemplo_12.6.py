@@ -1,5 +1,5 @@
 # Exemplo 12.6
-
+from random import randint
 
 # Função Criada
 def geradordelistas(qtd, a, b):
