@@ -2,12 +2,10 @@
 '''Empacotamento de dados com tupla'''
 
 # Função Criada
-def somatorio (*dados): # O * Indica que é uma tupla
-    r = 0 
-    for i in dados:
-        r += i
-    return r
+def MontaSaida (*dados, sep=', '):
+    saida = sep.join(dados)
+    return saida
 
 # Código principal
-v = somatorio(1,2,3,4,5)
-print(v)
+itens = MontaSaida('Maçã', 'Laranja', 'Banana', 'Melão')
+print(itens)
