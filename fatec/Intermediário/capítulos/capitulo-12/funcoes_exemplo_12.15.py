@@ -7,3 +7,8 @@ def Fatorial(N):
             return 1 
         else:
               return N * Fatorial(N-1)
+# Código Principal
+
+entrada = int(input('Digite um número:'))
+F = Fatorial(entrada)
+print(f'O fatorial de {entrada} é {F}')
