@@ -1,9 +1,8 @@
-s=123
+L = [2, 10, 8 , 7]
+Laoquadrado = []
 
-for d in str(s):
-    match d:
-        case 3: print('x', end='')
-        case 2: print('a', end='')
-        case 1: print('y', end='')
-        case _: print('z', end='')
+for i in L:
+    Laoquadrado.append(i**2)
     
+print(Laoquadrado)
+
