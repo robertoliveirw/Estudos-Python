@@ -1,8 +1,3 @@
-L = [2, 10, 8 , 7]
-Laoquadrado = []
-
-for i in L:
-    Laoquadrado.append(i**2)
-    
-print(Laoquadrado)
-
+C = [ 4, -71, 2, 5, -53, -79, 2 ]
+D = [ n for n in C if n > 0 ]
+print(sum(D))
