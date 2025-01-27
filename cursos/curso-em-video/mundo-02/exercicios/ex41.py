@@ -7,7 +7,6 @@ Acima Master'''
 
 idade = int(input("Digite a idade do atleta: "))
 
-# Classificação por idade
 if idade <= 9:
     categoria = "Mirim"
 elif idade <= 14:
