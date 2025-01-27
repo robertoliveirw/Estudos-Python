@@ -1,0 +1,1 @@
+'''Ler o primeiro termo e a razão de uma PA e motrar os 10 primeiros termos'''
