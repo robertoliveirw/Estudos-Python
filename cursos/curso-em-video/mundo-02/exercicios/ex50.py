@@ -1,0 +1,1 @@
+'''Ler 6 numeros inteiros e mostrar a soma apenas dos numeros pares'''
