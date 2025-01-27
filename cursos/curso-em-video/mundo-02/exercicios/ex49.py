@@ -1,0 +1,1 @@
+'''Refazer o ex09 mostrando a taubada de um número que o usuário escolher só que agora usando o laço for'''

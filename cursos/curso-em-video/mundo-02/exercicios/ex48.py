@@ -1,0 +1,1 @@
+'''Calcular a soma entre todos os numeros impares que são multiplos de 3 entre 1 e 500'''
