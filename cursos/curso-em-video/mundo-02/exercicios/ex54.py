@@ -1,0 +1,1 @@
+'''Ler o nome de pessoas e dizer quantas pessoas ainda não atingiram a maioridade e quantas já são de maiores'''
