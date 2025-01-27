@@ -1,0 +1,1 @@
+'''Ler se o número é primo ou não'''
