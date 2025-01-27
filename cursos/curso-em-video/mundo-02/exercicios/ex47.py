@@ -1,0 +1,1 @@
+'''Todos os numeros pares entre 0 e 50'''
