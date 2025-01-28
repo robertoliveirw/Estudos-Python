@@ -1,2 +1,2 @@
-'''Jogar par ou ímpar. Só será interrompido quando o jogador perder, mostrando a quantidade de vitórias consecutivas que ele conquistou no final do jogo'''
+'''Faça um programa que mostre a tabuada de vários números um de cada vez para cada valor digitado. O programa será interrmopido quando um número negativo for solicitado'''
 
