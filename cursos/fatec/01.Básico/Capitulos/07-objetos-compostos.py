@@ -7,7 +7,7 @@ numeros = []
 while True:
 
     entrada = input(
-        'Digite um número para adicionar a lista ou digite \'FIM\' para finalizar.').strip()
+        'Digite um número para adicionar a lista ou digite \'FIM\' para finalizar.').strip().upper()
 
     if entrada.upper() == 'FIM':
         break
