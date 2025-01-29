@@ -13,9 +13,9 @@ print(resultado)  # Saída: 7
 # Exemplo de Yield - Função Geradora:
 def contador():
     for i in range(3):
-        yield i  # Pausa e retorna i a cada iteração
+        yield i  # Pausa e retorna i
 
-gen = contador()
-print(next(gen))  # Saída: 0
-print(next(gen))  # Saída: 1
-print(next(gen))  # Saída: 2
+gen = contador()  # Criando um gerador
+
+for num in gen:  # Iterando sobre o gerador com for
+    print(num)
