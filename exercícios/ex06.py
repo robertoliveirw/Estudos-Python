@@ -7,4 +7,4 @@ for numeros in range(1, numero+1):
     print(numeros)
     controlador *= numeros
     
-print(f'A soma é: {controlador}')
+print(f'O fatorial é: {controlador}')
