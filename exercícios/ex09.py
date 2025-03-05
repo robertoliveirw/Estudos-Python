@@ -1,1 +1,1 @@
-Gere a sequência de Fibonacci até um número ou quantidade de termos especificada pelo usuário.
+# Gere a sequência de Fibonacci até um número ou quantidade de termos especificada pelo usuário.
