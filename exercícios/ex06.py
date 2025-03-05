@@ -1,0 +1,1 @@
+# Calcule o fatorial de um número informado pelo usuário usando um loop.
