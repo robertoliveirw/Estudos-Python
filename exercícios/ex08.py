@@ -1,0 +1,1 @@
+# Verifique se um número fornecido pelo usuário é primo.
