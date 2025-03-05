@@ -1,0 +1,1 @@
+# Verifique se uma string é um palíndromo (lê-se igual de trás para frente).
