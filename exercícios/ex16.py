@@ -1,0 +1,1 @@
+# Receba uma lista de números e calcule a média.
