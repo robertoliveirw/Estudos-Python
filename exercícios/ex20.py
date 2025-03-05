@@ -1,0 +1,1 @@
+# Inverta os elementos de uma lista sem usar métodos prontos.
