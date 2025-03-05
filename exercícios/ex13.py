@@ -1,0 +1,1 @@
+# Conte quantas vezes cada caractere aparece em uma string (use um dicionário para armazenar os resultados).
