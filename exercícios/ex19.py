@@ -8,7 +8,7 @@ def geradordelista(qtde):
         L.append(randint(1, 5))
     return L
 
-qtde_de_itens = int(input('QUANTIDADE DE NÚMEROS DA LISTA'))
+qtde_de_itens = int(input('QUANTIDADE DE NÚMEROS DA LISTA: '))
 
 lista_original = geradordelista(qtde_de_itens)
 print('A lista original é: ', lista_original)
