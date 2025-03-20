@@ -14,8 +14,3 @@ def escreve_csv(texto1, texto2, texto3, texto4):
     with open('database/initial_database.csv','a', newline='') as csvfile:
         escrever = csv.writer(csvfile, delimiter=';')
         escrever.writerow([texto1, texto2, texto3, texto4])
-
-
-texto_aleatorio = input('Digite no seguinte padrão: APLICAÇÃO  USUÁRIO E-MAIL SENHA')
-texto_tratado = tratar_string(texto_aleatorio)
-escreve_csv(texto_tratado[0], texto_tratado[1], texto_tratado[2], texto_tratado[3] )
