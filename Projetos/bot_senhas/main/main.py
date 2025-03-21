@@ -11,7 +11,7 @@ def tratar_string(texto):
     return aplicacao, usuario, email, senha
 
 def escreve_csv(aplicacao, usuario, email, senha):
-    with open('database/initial_database.csv','a', newline='') as csvfile:
+    with open('database/initial_database.csv', 'a', newline='', encoding='utf-8') as csvfile:
         escrever = csv.writer(csvfile, delimiter=';')
         escrever.writerow([aplicacao, usuario, email, senha])
 
@@ -22,9 +22,3 @@ def procura_csv(aplicacao_desejada):
             if linha and aplicacao_desejada in linha[0]: 
                 aplicacao, usuario, email, senha = linha[:4] 
                 return print(f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}")
-            elif linha not in aplicacao_desejada in linha[0]:
-                return print(f'Aplicação {aplicacao_desejada} não encontrada.')
-
-asdada = 'Google usergoogle google@google.com 123google'
-string_tratada = tratar_string(asdada)
-escreve_csv(*string_tratada)
