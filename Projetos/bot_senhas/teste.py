@@ -1,8 +1,14 @@
 from main.main import tratar_string, escreve_csv, procura_csv
 
 # testando funções
-aplicacao, usuario, email, senha = tratar_string("Facebook user123 email@example.com pass123")
-print(aplicacao, usuario, email, senha)
+string_bruta = input('Digite as suas credenciais no seguinte padrão: APLICAÇÃO USUÁRIO E-MAIL SENHA \n')
+print('Versão bruta: ', string_bruta)
 
-escreve_csv(aplicacao, usuario, email, senha)
-procura_csv('facebook')
+string_tratada = tratar_string(string_bruta)
+print('Sring tratada', string_tratada)
+
+escreve_csv(*string_tratada)
+
+print('-'*10)
+
+procura_csv('tiktok')
