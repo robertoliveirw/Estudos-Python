@@ -19,6 +19,9 @@ def procura_csv(aplicacao_desejada):
     with open('database/initial_database.csv', newline='') as f:
         reader = csv.reader(f, delimiter=';')
         for linha in reader:
-            if linha and aplicacao_desejada in linha[0]: 
-                aplicacao, usuario, email, senha = linha[:4] 
-                return print(f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}")
+            if linha and aplicacao_desejada.lower() == linha[0].lower(): 
+                aplicacao, usuario, email, senha = linha[:4]
+                print(f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}")
+                return
+
+    print(f"Aplicação '{aplicacao_desejada}' não encontrada.")
