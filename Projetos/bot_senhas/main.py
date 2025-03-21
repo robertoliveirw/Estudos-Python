@@ -14,3 +14,12 @@ def escreve_csv(texto1, texto2, texto3, texto4):
     with open('database/initial_database.csv','a', newline='') as csvfile:
         escrever = csv.writer(csvfile, delimiter=';')
         escrever.writerow([texto1, texto2, texto3, texto4])
+
+def procura_csv(aplicacao):
+    with open('database/initial_database.csv', newline='') as f:
+        reader = csv.reader(f, delimiter=';')
+        for linha in reader:
+            if aplicacao in linha:
+                return linha
+
+    return None
