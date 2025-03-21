@@ -21,5 +21,10 @@ def procura_csv(aplicacao_desejada):
         for linha in reader:
             if linha and aplicacao_desejada in linha[0]: 
                 aplicacao, usuario, email, senha = linha[:4] 
-                return f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}"
-    return f"Nenhum aplicativo encontrado para: {aplicacao_desejada}"
+                return print(f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}")
+            elif linha not in aplicacao_desejada in linha[0]:
+                return print(f'Aplicação {aplicacao_desejada} não encontrada.')
+
+asdada = 'Google usergoogle google@google.com 123google'
+string_tratada = tratar_string(asdada)
+escreve_csv(*string_tratada)
