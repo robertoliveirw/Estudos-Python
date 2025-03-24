@@ -8,8 +8,12 @@ def tratar_string(texto):
     usuario = palavras[1] if len(palavras) > 1 else ""
     email = palavras[2] if len(palavras) > 2 else ""
     senha = palavras[3] if len(palavras) > 3 else ""
+
+    encripted_usuario = cryptocode.encrypt(usuario, password='12345')
+    encripted_email = cryptocode.encrypt(email, password='12345')
+    encripted_senha = cryptocode.encrypt(senha, password='12345')
     
-    return aplicacao, usuario, email, senha
+    return aplicacao, encripted_usuario, encripted_email, encripted_senha
 
 def escreve_csv(aplicacao, usuario, email, senha):
     with open('database/initial_database.csv', 'a', newline='', encoding='utf-8') as csvfile:
