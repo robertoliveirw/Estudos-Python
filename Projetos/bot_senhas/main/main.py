@@ -1,4 +1,5 @@
 import csv
+import cryptocode
 
 def tratar_string(texto):
     palavras = texto.split()
