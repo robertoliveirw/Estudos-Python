@@ -25,7 +25,10 @@ def procura_csv(aplicacao_desejada):
         reader = csv.reader(f, delimiter=';')
         for linha in reader:
             if linha and aplicacao_desejada.lower() == linha[0].lower(): 
-                aplicacao, usuario, email, senha = linha[:4]
+                aplicacao, encripted_usuario, encripted_email, encripted_senha = linha[:4]
+                usuario = cryptocode.decrypt(encripted_usuario, password='12345')
+                email = cryptocode.decrypt(encripted_email, password='12345')
+                senha = cryptocode.decrypt(encripted_senha, password='12345')
                 print(f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}")
                 return
 
