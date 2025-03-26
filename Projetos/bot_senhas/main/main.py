@@ -1,5 +1,6 @@
 import csv
 import cryptocode
+import psycopg2
 
 def tratar_string(texto):
     palavras = texto.split()
@@ -15,10 +16,37 @@ def tratar_string(texto):
     
     return aplicacao, encripted_usuario, encripted_email, encripted_senha
 
-def escreve_csv(aplicacao, usuario, email, senha):
+'''def escreve_csv(aplicacao, encripted_usuario, encripted_email, encripted_senha):
     with open('database/initial_database.csv', 'a', newline='', encoding='utf-8') as csvfile:
         escrever = csv.writer(csvfile, delimiter=';')
-        escrever.writerow([aplicacao, usuario, email, senha])
+        escrever.writerow([aplicacao, encripted_usuario, encripted_email, encripted_senha])'''
+
+def escreve_sql(aplicacao, encripted_usuario, encripted_email, encripted_senha):
+    try:
+        # Conectar no Banco de Dados
+        conexao = psycopg2.connect(
+            database ="bot_senha",
+            host = "localhost",
+            user = "postgres",
+            password = '1234',
+            port = "5432"
+        )
+        
+        cursor = conexao.cursor()
+        query = """
+        INSERT INTO senhas_db_1 (aplicacao, usuario, email, senha)
+        VALUES (%s, %s, %s, %s);
+        """
+
+        cursor.execute(query, (aplicacao, encripted_usuario, encripted_email, encripted_senha))
+        conexao.commit()
+        print("Dados inseridos com sucesso!")
+
+        cursor.close()
+        conexao.close()
+
+    except Exception as e:
+        print(f"Erro ao inserir dados: {e}")
 
 def procura_csv(aplicacao_desejada):
     with open('database/initial_database.csv', newline='') as f:
