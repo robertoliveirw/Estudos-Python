@@ -16,11 +16,6 @@ def tratar_string(texto):
     
     return aplicacao, encripted_usuario, encripted_email, encripted_senha
 
-'''def escreve_csv(aplicacao, encripted_usuario, encripted_email, encripted_senha):
-    with open('database/initial_database.csv', 'a', newline='', encoding='utf-8') as csvfile:
-        escrever = csv.writer(csvfile, delimiter=';')
-        escrever.writerow([aplicacao, encripted_usuario, encripted_email, encripted_senha])'''
-
 def escreve_sql(aplicacao, encripted_usuario, encripted_email, encripted_senha):
     try:
         # Conectar no Banco de Dados
@@ -48,6 +43,45 @@ def escreve_sql(aplicacao, encripted_usuario, encripted_email, encripted_senha):
     except Exception as e:
         print(f"Erro ao inserir dados: {e}")
 
+def procura_sql(aplicacao_desejada):
+    try:
+        # Conectar ao banco de dados
+        conexao = psycopg2.connect(
+            database="bot_senha",
+            host="localhost",
+            user="postgres",
+            password="1234",
+            port="5432"
+        )
+
+        cursor = conexao.cursor()
+
+        query = """
+        SELECT aplicacao, usuario, email, senha 
+        FROM senhas_db_1
+        WHERE LOWER(aplicacao) = LOWER(%s);
+        """
+
+        cursor.execute(query, (aplicacao_desejada,))
+        resultado = cursor.fetchone()
+    
+        if resultado:
+            aplicacao, encripted_usuario, encripted_email, encripted_senha = resultado
+            usuario = cryptocode.decrypt(encripted_usuario, password='12345')
+            email = cryptocode.decrypt(encripted_email, password='12345')
+            senha = cryptocode.decrypt(encripted_senha, password='12345')
+
+            print(f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}")
+        else:
+            print(f"Aplicação '{aplicacao_desejada}' não encontrada.")
+
+        cursor.close()
+        conexao.close()
+
+    except Exception as e:
+        print(f"Erro ao buscar dados: {e}")
+
+'''
 def procura_csv(aplicacao_desejada):
     with open('database/initial_database.csv', newline='') as f:
         reader = csv.reader(f, delimiter=';')
@@ -61,3 +95,11 @@ def procura_csv(aplicacao_desejada):
                 return
 
     print(f"Aplicação '{aplicacao_desejada}' não encontrada.")
+    '''
+
+'''
+def escreve_csv(aplicacao, encripted_usuario, encripted_email, encripted_senha):
+    with open('database/initial_database.csv', 'a', newline='', encoding='utf-8') as csvfile:
+        escrever = csv.writer(csvfile, delimiter=';')
+        escrever.writerow([aplicacao, encripted_usuario, encripted_email, encripted_senha])
+'''
