@@ -1,4 +1,3 @@
-import csv
 import cryptocode
 import psycopg2
 
@@ -80,26 +79,3 @@ def procura_sql(aplicacao_desejada):
 
     except Exception as e:
         print(f"Erro ao buscar dados: {e}")
-
-'''
-def procura_csv(aplicacao_desejada):
-    with open('database/initial_database.csv', newline='') as f:
-        reader = csv.reader(f, delimiter=';')
-        for linha in reader:
-            if linha and aplicacao_desejada.lower() == linha[0].lower(): 
-                aplicacao, encripted_usuario, encripted_email, encripted_senha = linha[:4]
-                usuario = cryptocode.decrypt(encripted_usuario, password='12345')
-                email = cryptocode.decrypt(encripted_email, password='12345')
-                senha = cryptocode.decrypt(encripted_senha, password='12345')
-                print(f"Aplicativo: {aplicacao}\nUsuário: {usuario}\nE-mail: {email}\nSenha: {senha}")
-                return
-
-    print(f"Aplicação '{aplicacao_desejada}' não encontrada.")
-    '''
-
-'''
-def escreve_csv(aplicacao, encripted_usuario, encripted_email, encripted_senha):
-    with open('database/initial_database.csv', 'a', newline='', encoding='utf-8') as csvfile:
-        escrever = csv.writer(csvfile, delimiter=';')
-        escrever.writerow([aplicacao, encripted_usuario, encripted_email, encripted_senha])
-'''
