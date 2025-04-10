@@ -18,6 +18,8 @@ while True:
                 lista_impar.append(i)
     
     print('-='*30)
+    print(f'A Lista completa é: {lista}')
+    print('-='*30)
     print(f'Lista de números pares: {lista_par}')
     print('-='*30)
     print(f'Lista de números ímpares: {lista_impar}')
